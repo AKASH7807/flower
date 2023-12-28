@@ -1,0 +1,545 @@
+@font-face {
+    font-family: "font";
+    src: url(beast.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 1.5rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo img {
+    width: 30px;
+    height: 30px;
+}
+
+header .logo span {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+    margin-left: 1.5rem;
+}
+
+header .navbar a:hover {
+    color: pink;
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+    display: inline-block;
+}
+
+header .icons {
+    display: flex;
+    flex-direction: row;
+
+}
+
+header .icons a:hover {
+    color: pink;
+}
+
+header #toggler {
+    display: none;
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: #333;
+    border-radius: 0.5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
+    background: url("bg2.jpg") no-repeat;
+    background-size: cover;
+    filter: brightness(90%);
+}
+
+.home .content {
+    max-width: 50rem;
+}
+
+.home .content h3 {
+    font-size: 5.5rem;
+    color: #b803ff;
+    padding: 5px 0;
+    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+}
+
+.home .content span {
+    font-size: 3.5rem;
+    color: #000;
+    padding: 3px 0;
+}
+
+.home .content p {
+    font-size: 1.5rem;
+    color: #333;
+    padding: 4px 4px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: 0.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.btn:hover {
+    color: #b803ff;
+    transform: scale(0.9);
+}
+
+
+
+
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+@media(max-width:768px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: 0.1rem solid rgba(0, 0, 0, .1);
+        display: none;
+        transition: 1s;
+    }
+
+    header #toggler:checked~.navbar {
+        display: block;
+        transition: 1s;
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: 0.1rem solid rgba(0, 0, 0, 0.1);
+        display: block;
+        border-radius: 10px;
+        text-align: center;
+        transition: 1s;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .home .content span {
+        font-size: 2.8rem;
+    }
+
+    .home .content p {
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    
+}
+
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .home .content h3 {
+        font-size: 4.3rem;
+    }
+
+    .home .content span {
+        font-size: 2.7rem;
+    }
+
+    .home .content p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+.hero {
+    background-color: #f8f8f8;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h1 {
+    text-align: center;
+    font-size: 40px;
+    line-height: 60px;
+    font-family: "font";
+    margin-top: 20px;
+    border-radius: 200px;
+    width: 300px;
+    height: 60px;
+    background-color: #ff7200;
+    color: #fff;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 90%;
+    margin: 65px auto;
+}
+
+.hero-content {
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+}
+
+.hero-img {
+    flex: 1;
+    width: 600px;
+    margin: auto;
+}
+
+.hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #050505;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.hero-img img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.hero-content h2 {
+    font-size: 34px;
+    color: #333;
+}
+
+.hero-content p {
+    margin-top: 15px;
+    font-size: 16px;
+    font-style: italic;
+    color: #666;
+}
+
+@media (max-width:500px) {
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+        margin: 0px;
+        left: 0;
+        padding: 0px 40px;
+        overflow-x: hidden;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+        display: inline-block;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 30px 0px;
+    }
+
+    .hero-img {
+        width: 100%;
+        padding: 25px 0;
+    }
+
+    .products h1 {
+        font-size: 24px;
+    }
+    .box{
+        margin: 0 10px;
+        
+    }
+}
+
+
+.icons-container {
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.icons-container .icons {
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, .1);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex: 1 1 25rem;
+    border-radius: 10px;
+}
+
+.icons i {
+   font-size: 20px;
+    margin-right: 2rem;
+}
+.icons i:hover{
+    color: #b803ff;
+}
+
+.icons h3 {
+    color: #333;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.icons span {
+    color: #999;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.products h1 {
+    width: 100%;
+    padding: 25px 0;
+    background: rgba(255, 192, 203, 0.705);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.products h1 span {
+    padding-left: 10px;
+    color: #b803ff;
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .1);
+    border-radius: 0.5rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.products .box-container .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.7rem 1rem;
+    font-size: 2rem;
+    color: pink;
+    background: rgba(255, 51, 153, 05);
+    z-index: 1;
+    border-radius: 0.5rem;
+}
+
+.products .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.image img {
+    height: 25rem;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+
+
+.box-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, auto);
+}
+.box:hover{
+    transform: scale(0.9);
+}
+
+.box .dicount {
+    padding: 5px 5px;
+    margin: 5px 5px;
+    width: 60px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    background: #b803ff;
+    color: #fff;
+}
+
+.box .price {
+    width: 100%;
+    height: 40px;
+    background: pink;
+    padding: 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price p {
+    line-height: 30px;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    flex-basis: 50%;
+}
+
+.price .cart {
+    flex-basis: 50%;
+    background: #b803ff;
+    height: 30px;
+    right: 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fcfcfc;
+    line-height: 30px;
+}
+
+
+.contact .heading{
+    padding: 20px 5px;
+    color: #333;
+    background: pink;
+    font-size: 24px;
+}
+.contact .heading span{
+    color: blue;
+    font-size: 22px;
+}
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.row form{
+    margin: 10px 0;
+    width: 100%;
+    height: 300px;
+    display:flex;
+    box-shadow: 2px 2px 5px #000;
+    flex-direction: column;
+    background: #ededed;
+    border-radius: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+form input{
+    margin: 10px 0;
+    padding: 10px 0;
+    background: transparent;
+    text-align: center;
+    border-bottom: 1px solid #0269bd;
+    width: 90%;
+    color: #fcfcfc;
+}
+
+
+.contact .row .image{
+    flex: 1 1 40px;
+}
+footer{
+    width: 100%;
+    height: 30px;
+    background: pink;
+    text-align: center;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h1{
+    line-height: 30px;
+    color: #333;
+}
+footer h1 span{
+    color: #b803ff;
+}
