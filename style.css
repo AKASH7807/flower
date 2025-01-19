@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 @font-face {
     font-family: "font";
     src: url(beast.ttf);
@@ -7,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Outfit", serif;
     outline: none;
     border: none;
     text-decoration: none;
@@ -40,13 +42,19 @@ header {
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
 header .logo img {
     width: 30px;
     height: 30px;
 }
 
 header .logo span {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #333;
     font-weight: bolder;
 }
@@ -106,10 +114,14 @@ header .fa-bars {
 }
 
 .home .content h3 {
+    font-family: "Space Grotesk", serif;
+    text-transform: uppercase;
     font-size: 5.5rem;
-    color: #b803ff;
+    background: -webkit-linear-gradient(65deg, #ff00ff, #2f7efe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     padding: 5px 0;
-    text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .home .content span {
@@ -137,7 +149,8 @@ header .fa-bars {
 
 .btn:hover {
     color: #b803ff;
-    transform: scale(0.9);
+    background: white;
+    transform: scale(0.95);
 }
 
 
@@ -206,7 +219,7 @@ header .fa-bars {
         padding-top: 10px;
         font-size: 16px;
     }
-    
+
 }
 
 
@@ -294,14 +307,19 @@ header .fa-bars {
 
 .hero-content h2 {
     font-size: 34px;
+    font-family: "Nunito", serif;
     color: #333;
 }
 
 .hero-content p {
     margin-top: 15px;
     font-size: 16px;
-    font-style: italic;
     color: #666;
+}
+
+.btn-read:hover {
+    color: #fff;
+    background: #e06b0c;
 }
 
 @media (max-width:500px) {
@@ -333,9 +351,10 @@ header .fa-bars {
     .products h1 {
         font-size: 24px;
     }
-    .box{
+
+    .box {
         margin: 0 10px;
-        
+
     }
 }
 
@@ -360,10 +379,11 @@ header .fa-bars {
 }
 
 .icons i {
-   font-size: 20px;
+    font-size: 20px;
     margin-right: 2rem;
 }
-.icons i:hover{
+
+.icons i:hover {
     color: #b803ff;
 }
 
@@ -422,6 +442,9 @@ header .fa-bars {
 .products .box-container .box .image {
     position: relative;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding-top: 2rem;
     overflow: hidden;
 }
@@ -441,8 +464,9 @@ header .fa-bars {
     gap: 20px;
     grid-template-columns: repeat(3, auto);
 }
-.box:hover{
-    transform: scale(0.9);
+
+.box:hover {
+    transform: scale(0.98);
 }
 
 .box .dicount {
@@ -484,27 +508,29 @@ header .fa-bars {
 }
 
 
-.contact .heading{
+.contact .heading {
     padding: 20px 5px;
     color: #333;
     background: pink;
     font-size: 24px;
 }
-.contact .heading span{
+
+.contact .heading span {
     color: blue;
     font-size: 22px;
 }
 
-.contact .row{
+.contact .row {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
-.row form{
+
+.row form {
     margin: 10px 0;
     width: 100%;
     height: 300px;
-    display:flex;
+    display: flex;
     box-shadow: 2px 2px 5px #000;
     flex-direction: column;
     background: #ededed;
@@ -512,7 +538,8 @@ header .fa-bars {
     align-items: center;
     justify-content: center;
 }
-form input{
+
+form input {
     margin: 10px 0;
     padding: 10px 0;
     background: transparent;
@@ -523,10 +550,11 @@ form input{
 }
 
 
-.contact .row .image{
+.contact .row .image {
     flex: 1 1 40px;
 }
-footer{
+
+footer {
     width: 100%;
     height: 30px;
     background: pink;
@@ -536,10 +564,65 @@ footer{
     align-items: center;
     justify-content: center;
 }
-footer h1{
+
+footer h1 {
     line-height: 30px;
     color: #333;
 }
-footer h1 span{
+
+footer h1 span {
     color: #b803ff;
+}
+
+
+/* BUTTON  */
+/* From Uiverse.io by cssbuttons-io */
+.button button {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+}
+
+.button button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.button button:hover {
+    color: #fff;
+}
+
+.button button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.button button:hover:before {
+    top: -30px;
+    left: -30px;
+}
+
+.button button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
 }
